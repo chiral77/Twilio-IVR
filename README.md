@@ -1,15 +1,18 @@
-<a href="https://www.twilio.com">
-  <img src="https://static0.twilio.com/marketing/bundles/marketing/img/logos/wordmark-red.svg" alt="Twilio" width="250" />
-</a>
+This is based on Twilio IVR Tutorial of IVR with updates to Python 3.7 and [Flask](http://flask.pocoo.org/) web framework.
 
-# IVR Phone Tree: IVR for beginners. Powered by Twilio - Python/Flask
+[Read the original tutorial here](https://www.twilio.com/docs/tutorials/walkthrough/ivr-phone-tree/python/flask)!
 
-[![Build Status](https://travis-ci.org/TwilioDevEd/ivr-phone-tree-python.svg?branch=master)](https://travis-ci.org/TwilioDevEd/ivr-phone-tree-python)
+Changes: fixed few library differnce between Python 2.7 and 3.7, e.g. has_key -> in
+Add Redis DB for a customer DB with phone number and address to be read back the address to the caller.
 
-This is an application example implementing an automated phone line using
-Python 2.7 and [Flask](http://flask.pocoo.org/) web framework.
+See https://redis.io/topics/quickstart for installing Redis DB
 
-[Read the full tutorial here](https://www.twilio.com/docs/tutorials/walkthrough/ivr-phone-tree/python/flask)!
+Start the Redis Server
+ $redis-server
+Use redis-cli to put or get DB entries
+$redis-cli
+
+Original tutorial instructions:
 
 ## Local Development
 
