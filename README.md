@@ -12,7 +12,7 @@ Start the Redis Server
 Use redis-cli to put or get DB entries
 $redis-cli
 
-Original tutorial instructions:
+Updated from original tutorial instructions:
 
 ## Local Development
 
@@ -21,8 +21,8 @@ This project is built using [Flask](http://flask.pocoo.org/) web framework.
 1. First clone this repository and `cd` into it.
 
    ```bash
-   $ git clone git@github.com:TwilioDevEd/ivr-phone-tree-python.git
-   $ cd ivr-phone-tree-python
+   $ gh repo clone chiral77/Twilio-IVR
+   $ cd Twilio-IVR
    ```
 
 1. Create a new virtual environment.
@@ -32,12 +32,6 @@ This project is built using [Flask](http://flask.pocoo.org/) web framework.
         ```bash
         virtualenv venv
         source venv/bin/activate
-        ```
-
-    - If using [virtualenvwrapper](https://virtualenvwrapper.readthedocs.org/en/latest/):
-
-        ```bash
-        mkvirtualenv ivr-phone-tree-python
         ```
 
 1. Install the dependencies.
