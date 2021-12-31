@@ -17,13 +17,13 @@ See https://redis.io/topics/quickstart for installing Redis DB
 
 Start the Redis Server $redis-server Use redis-cli to put or get DB entries $redis-cli
 
-Pay special attention asynch of redis client access of Rredis DB. 
+Pay special attention to asynch of redis client access. 
 
 1. First clone this repository and `cd` into it.
 
    ```bash
    git clone https://github.com/chiral77/Twilio-IVR.git
-   cd Twilio-IVR/Node.js
+   cd Twilio-IVR/NodeJS
    ```
 1. Install project's dependencies.
 
