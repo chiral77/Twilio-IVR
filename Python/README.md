@@ -23,7 +23,7 @@ This project is built using [Flask](http://flask.pocoo.org/) web framework.
 
    ```bash
    $ git clone https://github.com/chiral77/Twilio-IVR.git
-   $ cd Twilio-IVR/python
+   $ cd Twilio-IVR/Python
    ```
 
 1. Create a new virtual environment.
