@@ -5,6 +5,7 @@ const redisClient = redis.createClient({
   host: '127.0.0.1',
 }); // create Redis client
 
+/* Unit test will need to comment out asynch below */
 (async() => {
   await redisClient.connect();
 })();
