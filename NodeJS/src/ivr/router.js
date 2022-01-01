@@ -5,9 +5,9 @@ const redisClient = redis.createClient({
   host: '127.0.0.1',
 }); // create Redis client
 
-// (async() => {
-//   await redisClient.connect();
-// })();
+(async() => {
+  await redisClient.connect();
+})();
 
 redisClient.on('connect', () => {
   console.log('Redis Client Connected');
