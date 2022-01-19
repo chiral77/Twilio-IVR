@@ -62,6 +62,13 @@ Pay special attention to asynch of redis client access.
 1. Provision a number under the [Twilio's Manage Numbers](https://www.twilio.com/console/phone-numbers/incoming)
    page on your account. Set the voice URL for the number to http://[your-ngrok-subdomain].ngrok.io/ivr/welcome
 
+
+Part 2: Containerized the project
+
+- At the time of this build, express 4.x.x was not ready, the express version was downgraded to 3.1.6
+- Add Dockerfile and Docker-compose.yml
+- Add .gitter.env to replace .env
+- use "docker-compose up --build" to start the service
 ## Meta
 
 * No warranty expressed or implied. Software is as is. Diggity.
