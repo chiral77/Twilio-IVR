@@ -1,39 +1,32 @@
 const Router = require('express').Router;
 const {welcome, menu, pickup} = require('./handler');
 const redis = require('redis');
-const redisClient = redis.createClient({
-  host: '127.0.0.1',
-}); // create Redis client
+// const redisClient = redis.createClient({
+//   host: 'redis-customer',
+//   port: 6379
+// }); // create Redis client
 
-/* Unit test will need to comment out asynch below */
-(async() => {
-  await redisClient.connect();
-})();
-
-redisClient.on('connect', () => {
-  console.log('Redis Client Connected');
-});
-redisClient.on('error', (err) =>{
-  console.log('Redis Client Connection Error', err);
-});
+const redisClient = require('./redis-client');
 
 const router = new Router();
 
 // POST: /ivr/welcome
 router.post('/welcome', (req, res) => {
   caller = req.body.From;
-
-  const getaddress = redisClient.get(caller);
-  getaddress.then( (reply) => {
-    if (reply) {
-      res.send(welcome(reply));
-    } else if (req.body.City) {
-      res.send(welcome(re.body.City));
-    } else {
-      send(welcome('Near By'));
-    }
-  });
+  // const getaddress = redisClient.get(caller);
+  let city = readAddress(caller);
+  
+  if (city) {
+    res.send(welcome(city));
+  } else {
+    send(welcome('Near By'));
+  };
 });
+
+async function readAddress (caller) {
+  let city = await redisClient.getAsync(caller);
+  return city;
+}
 
 // POST: /ivr/menu
 language: 'en-GB',
